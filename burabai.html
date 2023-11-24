@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Boxes</title>
+    <link rel="stylesheet" href="./bur/burabay.css">
+
+</head>
+<body>
+
+<!-- 
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">About</a>
+            <a href="#">Legends</a>
+
+        </nav>
+    </header> -->
+
+
+    <section class="parallax">
+
+        <img src="https://s.electerious.com/parallaxscene/p0.png" id="m1">
+        <img src="https://s.electerious.com/parallaxscene/p1.png" id="m2">
+        <img src="https://s.electerious.com/parallaxscene/p2.png" id="m3">
+        <img src="https://s.electerious.com/parallaxscene/p3.png" id="m4">
+        <img src="https://s.electerious.com/parallaxscene/p4.png" id="m5">
+        <h2 id="text">BURABAY</h2>
+        <img src="./bur/IMG_4706.PNG" id="e">
+
+
+    </section>
+
+    <section class="c2">
+        <header>
+            <h1>BURABAY</h1>
+            <p>Discover the beauty and wonders of Kazakhstan</p>
+        </header>
+    
+        <section class="main-content">
+            <div class="place-info">
+                
+                <div class="card">
+                    <style>
+                        * {box-sizing: border-box}
+                        body {font-family: Verdana, sans-serif; margin:0}
+                        .mySlides {display: none}
+                        img {vertical-align: middle;}
+                        
+                        /* Slideshow container */
+                        .slideshow-container {
+                        max-width: 1000px;
+                        position: relative;
+                        margin: auto;
+                        }
+                        
+                        /* Next & previous buttons */
+                        .prev, .next {
+                        cursor: pointer;
+                        /* position: absolute; */
+                        top: 50%;
+                        width: auto;
+                        padding: 16px;
+                        margin-top: -22px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        transition: 0.6s ease;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                        
+                        }
+                        
+                        /* Position the "next button" to the right */
+                        .next {
+                        right: 0;
+                        border-radius: 3px 0 0 3px;
+                        }
+                        
+                        /* On hover, add a black background color with a little bit see-through */
+                        .prev:hover, .next:hover {
+                        background-color: rgba(0,0,0,0.8);
+                        }
+                        
+                        /* Caption text */
+                        .text {
+                        color: #f2f2f2;
+                        font-size: 15px;
+                        /* padding: 8px 12px; */
+                        position: absolute;
+                        bottom: 8px;
+                        width: 100%;
+                        text-align: center;
+                        }
+                        
+                        /* Number text (1/3 etc) */
+                        .numbertext {
+                        color: #f2f2f2;
+                        font-size: 12px;
+                        padding: 8px 12px;
+                        position: absolute;
+                        top: 0;
+                        }
+                        
+                        /* The dots/bullets/indicators */
+                        .dot {
+                        cursor: pointer;
+                        height: 15px;
+                        width: 15px;
+                        margin: 0 2px;
+                        background-color: #bbb;
+                        border-radius: 50%;
+                        display: inline-block;
+                        transition: background-color 0.6s ease;
+                        }
+                        
+                        .active, .dot:hover {
+                        background-color: #717171;
+                        }
+                        
+                        /* Fading animation */
+                        .fade {
+                        animation-name: fade;
+                        animation-duration: 1.5s;
+                        }
+                        
+                        @keyframes fade {
+                        from {opacity: .4} 
+                        to {opacity: 1}
+                        }
+                        
+                        /* On smaller screens, decrease text size */
+                        @media only screen and (max-width: 300px) {
+                        .prev, .next,.text {font-size: 11px}
+                        }
+                    </style>
+                    <div class="slideshow-container">
+                        
+                        <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="https://s.zagranitsa.com/images/articles/8136/870x486/9d8753f53e05f5c430c5cbdf93ff4017.jpg?1557820647" style="width:100%">
+                        <!-- <div class="text">Caption Text</div> -->
+                        </div>
+                        
+                        <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="https://borovoe.kz/upload/medialibrary/11e/11ef76a82cb2aef8240d022bd9b0e7e2.jpg" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="https://history-akmola.kz/upload/000/u1/033/64b55bc3.jpeg" style="width:100%">
+                        </div>
+    
+                        
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+    
+                        <!-- <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div> -->
+                    </div>         
+                        
+                    <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {slideIndex = 1}    
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                        }
+                    </script>
+                    
+    
+                    <div class="card-text">
+                        <p class="ranking">Природа Курортной Зоны Бурабай</p>
+                        <p class="description">Многие сопки, утесы и ска­лы в Боровом кажутся сложенными громадными мат­рацами. В результате выветривания и действия воды и льда в скалах образовались углубления, впадины, наве­сы, сквозные отверстия. Поэтому горы и скалы Боро­вого проибрели необычайно живописный облик, каждый из которых связан с легендами или сказаниями.</p>
+            
+                    </div>     
+                </div>
+
+            </div>
+    
+            <div class="interesting-facts">
+                <h2>Интерсные факты</h2>
+                <ul>
+                    <li>Бурабай называют «жемчужиной Казахстана» и «казахстанской Швейцарией».</li>
+                    <li>В Боровом обитают около 300 видов животных и произрастают около 800 видов лесных, луговых, солончаковых растений.</li>
+                    <li>Боровое было национализировано и признано курортом общегосударственного значения аж в 1920 году.</li>
+                    
+                </ul>
+            </div>
+        </section>
+    
+        <section class="image-gallery">
+            <h2>Legends</h2>
+            <div class="gallery-container">
+
+                <div class="card1">
+                    <img src="https://krot.club/uploads/posts/2021-11/1637244940_1-krot-info-p-gora-kokshetau-borovoe-gori-krasivo-foto-1.jpg" alt="Image 1">
+                    <div class="card-text1">
+                        <h2>Легенда о Боровом</h2>
+                        <p>Горы Кокшетау, известные как "Голубые горы", получили свое название из-за синего неба и чистого воздуха. В прошлом здесь обитал белый верблюд по имени Бура, который предсказывал опасности своим ревом. Люди почитали его как священное существо, оберегающее от бед. Он предупредил об опасности от банды злодеев, но они решили убить его. В схватке Бура получил смертельное ранение, бросившись на разбойника. Перед смертью он вернулся к своему озеру, закрыв глаза у священной Каабы. Так он превратился в гору высотой 690 метров, которая получила имя Бурабай – Боровое.</p>
+                    </div>
+                </div>
+
+                <div class="card1">
+                    <img src="https://krots.top/uploads/posts/2021-11/1637024009_2-krot-info-p-zhumbaktas-skala-gori-krasivo-foto-2.jpg" alt="Image 1">
+                    <div class="card-text1">
+                        <h2>Жумбактас скала в Боровом.</h2>
+                        <p>Скала Жумбактас является местной достопримечательностью. С разных ракурсов скала выглядит по-разному, с одной стороны она напоминает пирамиду, с другой стороны она напоминает некую стрелу, указывающую в небо, с другой стороны скала напоминает казахскую юрту, так же скала напоминает девушку с развивающими на ветру волосами. По одной из легенд у хана были несколько сыновей и одна дочь, хан хотел выдать свою дочь за другого богатого хана, но девушка влюбилась в обычного парня и они сбежали вместе. Разгневанный хан отправил свои сыновей чтобы они вернули дочь, сыновья поймали влюбленных и когда плыли через озеро убили ее возлюбленного. Девушка в горе попросила Аллаха обратить ее в камень на то месте где погиб ее возлюбленный, Аллах услаш просьбу и исполнил желание девушки. С тех пор на это месте возвышается скала Жумбактас.</p>
+                    </div>
+                </div>
+                
+                <div class="card1">
+                    <img src="https://borovoe.kz/upload/okjetpes_gora.jpg" alt="Image 1">
+                    <div class="card-text1">
+                        <h2>Гора Окжетпес – легенда о свободе.</h2>
+                        <p>
+                            Гора Окжетпес в переводе на русский язык значит «не долетит стрела». Одна из легенд гласит что в давние времена в этих местах жил грозный хан, который вел войны с соседями. После очередного военного похода хан привез с собой много трофеев, одним из трофеев была живая девушка калмычка. Хану разрешил девушке выбрать самой себе мужа чтобы не заставлять ее сделать это. Девушка поднялась на гору Окжетпес и повесила там свой платок, она сказал хану что войн который из лука стрелой попадёт в платок, за того она выйдет за замуж. Не один из войнов так и не смог попасть стрелой в платок и не справился с задачей. Хан разозлился и сказал чтобы девушка спускалась со скалы, но юная дева спрыгнула со скалы в озеро Аулиеколь. На месте падения девушки выросла скала Жумбактас которая олицетворяет собой свободу выбора. 
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card1">
+                    <img src="https://photo.foto-planeta.com/view/5/3/2/9/imantau-532962.jpg" alt="Image 1">
+                    <div class="card-text1">
+                        <h2>Березовая роща Боровое – легенда.</h2>
+                        
+                        <p>
+                           В Боровом есть березовая роща из переплетенных между собой деревьев. От сюда и пошло название Танцующие березы, деревья причудливо переплелись между собой, и кажется что они застыли в бесконечном танце. Легенда гласит что когда то давним давно в данном месте проходил праздник, девушки из соседней деревни танцевали здесь свои танцы, и хан который хотел инкогнито посетить данное мероприятие переоделся в простого человека и пришел на праздник. Он долго смотрел как танцуют девушки до того момента пока одна из них его не узнала. Когда девушки узнали хана они испугались и застыли, а их тела превратились в березы.  
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card1">
+                    <img src="https://borovoe.kz/upload/medialibrary/dac/dac31e0ef56cd793f2ad52371866df19.jpg" alt="Image 1">
+                    <div class="card-text1">
+                        <h2>Поляна Абылай-Хана в Боровом</h2>
+                        <p>
+                            В Казахстане об Абылай-хане (1711-1781) знают все. Это видный военачальник и политический деятель XVIII века, сплотивший вокруг себя все казахские жузы (племенные объединения родов). <br> Трон Абылай хана в Бурабае, который согласно легенде исполняет желания туристов. Есть легенда, что Абылай-хан обладал магическими способностями, поэтому и трон, на котором он восседал, был волшебным. Чтобы желание исполнилось, туристам нужно обойти заветное место по часовой стрелке 7 раз. При этом желание надо либо загадывать после обхода трона, либо повторять про себя в процессе.
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="card1">
+                    <img src="https://borovoe.kz/upload/medialibrary/971/9713131274dda3da48bad42e2277f167.jpg" alt="Image 1">
+                    <div class="card-text1">
+                        <h2>Таскамал – каменная крепость в Бурабае.</h2>
+                        <p>
+                            Таскамал находится на территории природного парка Боровое между деревнями Щучинск и Боровое. Скала вызывает разные ассоциации ее появления или постройки. Одни из исследователей утверждают что скала имеет природное происхождение, альтернативные ученые заявляют, что данный комплекс был построен неизвестной высокоразвитой цивилизацией. Складывается впечатление что скала действительно сложена из огромных многотонных блоков
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+    </section>
+    <footer>
+        <p>Kamila Galeyeva</p>
+    </footer>
+    <script>
+        let text = document.getElementById('text');
+        
+        let e = document.getElementById('e');
+        let m1 = document.getElementById('m1');
+        let m2 = document.getElementById('m2');
+        let m3 = document.getElementById('m3');
+
+        let m4 = document.getElementById('m4');
+        let m5 = document.getElementById('m5');
+
+
+
+        
+
+        window.addEventListener('scroll', ()=>{
+            let value=window.scrollY;
+            text.style.marginTop=value*2+'px';
+            m5.style.left=value*1.5+'px';
+            m1.style.marginTop = value*-1.01*0.75+'px';
+            m2.style.left=-1.05*value*0.35+'px';
+            e.style.marginTop=value*1.01*0.25+'px';
+            m3.style.left=value*-1.025*0.3+'px';
+            m4.style.left=value*-1.025*0.5+'px';
+
+        })
+
+    </script>
+
+</body>
+</html>
